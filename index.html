@@ -1,0 +1,617 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta name="google-site-verification" 
+		  content="fD5gahNF0zLrE5sWK_ui7tJnNCARuboEw5YFHans1PE" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>ICCAD HALO Workshop 2021</title>
+	<style type="text/css"> 
+		body {
+			margin: 2px;
+			padding: 0;
+			background-color: white;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+		}
+		span.hl1 {
+		color:#ae00ff;
+		}
+		td.frameborder {
+			border-bottom: 1px solid #ae00ff;
+			border-left: 10px solid white;
+			border-right: 10px solid white;
+			
+		}
+		h1, h2 {
+			text-align: center;
+			margin: 5px;
+			padding: 5px;
+			background-color: white;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"
+		}
+		h3, h4 {
+			text-align: left;
+			margin: 2px;
+			padding: 5px;
+			background-color: white;
+		}
+		a {
+			text-decoration: none;
+		}
+		p.copyright1 {
+			text-align: center;
+			font-size: small;
+		}
+		p.secondaryTitle {
+			text-align: center;
+			margin: 1px;
+			padding: 2px;
+			background-color: white;
+		}
+		p.content1 {
+			text-align: left;
+			margin: 0px;
+			padding-top: 5px;
+			background-color: white;
+		}
+		p.content2 {
+			text-align: left;
+			margin: 0px;
+			padding-top: 5px;
+			background-color: white;
+			font-weight: bold;
+		}
+		p.content3 {
+			text-align: left;
+			margin-left: 5ex;
+			margin-right: 0em;
+			margin-top: 0em;
+			margin-bottom: 0em;
+			padding-top: 2px;
+			background-color: white;
+		}
+		p.content4 {
+			text-align: left;
+			margin-left: 4em;
+			margin-right: 0em;
+			margin-top: 0em;
+			margin-bottom: 0em;
+			padding-top: 2px;
+			background-color: white;
+		}
+		
+		
+		/*model*/
+		.btn_bn {
+			border: none;
+			text-align: left;
+			margin-left: 2em;
+			margin-right: 0em;
+			margin-top: 0em;
+			margin-bottom: 0em;
+			padding-top: 2px;
+			font-size: 14px;
+			cursor: pointer;
+			display: inline-block;
+			color: dodgerblue;
+		}
+	</style>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+</head> 
+<body> 
+	<table>
+		<!-- title -->
+		<tr class="frameborder">
+			<td class="frameborder">
+				<h2>Workshop on <span class="hl1">H</span>ardware and <span class="hl1">A</span>lgorithms for <span class="hl1">L</span>earning <span class="hl1">O</span>n-a-chip<br> (<span class="hl1">HALO</span>) 2021</h2>
+				<p class="secondaryTitle">Thursday, November 5, 2021</p>
+				<p class="secondaryTitle">Virtual Workshop Event</h4>
+				<p class="secondaryTitle">Past HALO workshops : <a href="http://nimo.asu.edu/halo/2015/">2015</a>/<a href="http://nimo.asu.edu/halo/2016/">2016</a>/<a href="http://nimo.asu.edu/halo/2017/">2017</a>/<a href="http://nimo.asu.edu/halo/">2018</a>/<a href="https://bonanyan.github.io/halo2019/">2019</a>/<a href="https://iccad-halo.github.io/">2020</a></p>
+				<!-- <p class="secondaryTitle"><a href="assets/CFP_HALO_2019.pdf">Call for Posters</a>, submission deadline: TBD, 2020 EDT. Student travel support available. -->
+				<!-- <p class="secondaryTitle">Poster Submission is closed. Student travel grant available. Welcome your participation! -->
+			</td>
+		</tr>
+		<!-- General Information and key topics -->
+		<tr>
+			<td class="frameborder">
+				<h3>General Information</h3>
+				<p>In recent years, machine/deep learning algorithms has unprecedentedly improved the accuracies in practical recognition and classification tasks, some even surpassing human-level accuracy. While significant progresses have been made on accelerating the models for real-time inference on edge and mobile devices, the training of the models largely remains offline on server side. State-of-the-art learning algorithms for deep neural networks (DNN) imposes significant challenges for hardware implementations in terms of computation, memory, and communication. This is especially true for edge devices and portable hardware applications, such as smartphones, machine translation devices, and smart wearable devices, where severe constraints exist in performance, power, and area.
+				</p>
+				<p>There is a timely need to map the latest complex learning algorithms to custom hardware, in order to achieve orders of magnitude improvement in performance, energy efficiency and compactness. Exemplary efforts from industry and academia include many application-specific hardware designs (e.g., xPU, FPGA, ASIC, etc.). Recent progress in computational neurosciences and nanoelectronic technology, such as emerging memory devices, will further help shed light on future hardware-software platforms for learning on-a-chip. At the same time new learning algorithms need to be developed to fully explore the potential of the hardware architecture.
+				</p>
+				<p>The overarching goal of this workshop is to explore the potential of on-chip machine learning, to reveal emerging algorithms and design needs, and to promote novel applications for learning. It aims to establish a forum to discuss the current practices, as well as future research needs in the aforementioned fields.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="frameborder">
+				<h3>Key Topics</h3>
+					<ul style="list-style-type:disc;">
+						<li>Synaptic plasticity and neuron motifs of learning dynamics</li>
+						<li>Computation models of cortical activities</li>
+						<li>Sparse learning, feature extraction and personalization</li>
+						<li>Deep learning with high speed and high power efficiency</li>
+						<li>Hardware acceleration for machine learning</li>
+						<li>Hardware emulation of brain</li>
+						<li>Nanoelectronic devices and architectures for neuro-computing</li>
+						<li>Applications of learning on a smart mobile platform</li>
+					</ul> 
+			</td>
+		</tr>
+		<!-- Speakers -->
+		<tr>
+			<td class="frameborder">
+				<h3>Speakers</h3>
+				<h4>Keynote</h4>
+				<ul style="list-style-type:none;">
+					<li>David Pan, The University of Texas at Austin</li>	
+					<li>Vijay Janapa Reddi, Harvard University</li>	
+<!-- 					<li>Allen Rush, AMD</li>
+				 	<li>Hsien-Hsin Lee, Facebook</li>
+				 	<li>Vikas Chandra, Facebook</li> -->
+				</ul>
+				<h4>Invited Speakers</h4>
+				<ul style="list-style-type:none;">
+					<li>Meng Li, Facebook</li>
+					<li>Peter Kairouz, Google</li>
+					<li>Zhiru Zhang, Cornell University</li>
+					<li>Jonathan Frankle, Massachusetts Institute of Technology</li>
+					<li>Yuhao Zhu, University of Rochester</li>
+					<li>Bo Yuan, Rugster University</li>
+					<li>Jianhua Yoshua Yang, University of Southern California</li>
+					<li>Xue Lin, Northeastern University</li>
+					<li>Shimeng Yu, Georgia Tech</li>
+				</ul>
+			</td>
+		</tr>
+	
+		<!-- Final Program -->
+		<tr>
+			<td class="frameborder">
+				<h3>Preliminary Program</h3>
+				<p class="content2">Note: Time Zone is CST</p>
+				<p class="content1">11:00am &#8212 11:05am</p>
+				<p class="content2">Introduction and opening remarks</p>
+				
+				<p class="content2">&#8212&#8212&#8212 Keynote talk &#8212&#8212&#8212</p>
+				<p class="content1">11:05am &#8212 11:50am</p>
+<!--				<p class="content3">TBD</p>-->
+ <!--  				<button type="button" class="btn_bn" data-toggle="modal" data-target="#keynote1">Progress and Challenges on the Path to Efficient Neuromorphic Learning
+				</button>
+				
+ 				<div class="modal fade" id="keynote1" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Keynote</h4>
+						</div>
+
+
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Mike Davies.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Mike Davies</b> is Director of Intel’s Neuromorphic Computing Lab. Since joining Intel Labs in 2014, Mike has researched neuromorphic architectures, algorithms, software, and systems, and has fabricated several neuromorphic chip prototypes to date. His group is responsible for Intel’s Loihi research chip. Previously, as a founding employee of Fulcrum Microsystems and its Director of Silicon Engineering, Mike pioneered high performance asynchronous design methodologies as applied to several generations of industry-leading Ethernet switch products. He joined Intel in 2011 by Intel’s acquisition of Fulcrum. 
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							  Intel’s Loihi neuromorphic chip has a growing body of results demonstrating that neuromorphic architectures can deliver order of magnitude gains in energy efficiency and computational latency for a wide range of workloads compared to conventional CPUs and GPUs.  Meanwhile, new learning algorithms inspired from neuroscience show a path to orders of magnitude more efficient learning compared to deep learning approaches.  Some of these are running on Loihi today, while others require ongoing neuromorphic innovations before they can be realized in hardware.  This talk shares some of these results and perspectives.
+							</p>
+						</div>
+
+
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div>  -->
+				
+				<p class="content3">David Pan, The University of Texas at Austin</p>
+				
+				
+				<p class="content2">&#8212&#8212&#8212 Session 1: Efficient I nference and Learning Algorithms &#8212&#8212&#8212 </p>
+				<p class="content2">Section Chair: </p>
+
+				<p class="content1">11:50am &#8212 12:15pm</p>
+ 				<!-- <p class="content3">Neural Networks Accelerator Design from the User Perspective</p> -->
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk1">Hyperdimensional Computing for Expeditionary Robotics</button>
+				
+				<div class="modal fade" id="invited_talk1" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Nathan McDonald.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Nathan McDonald</b> is a researcher at the Air Force Research Laboratory Information Directorate, AFRL/RI.  He earned a masters in nanoscale engineering from the College of Nanoscale Science and Engineering (CNSE), SUNY at Albany in 2012 and bachelors in physics in 2008.  His primary area of research is machine learning algorithms and hardware for size, weight, and power (SWaP) limited systems, which includes publications across diverse areas as memristors, optical reservoir computing, and hyperdimensional computing. 
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							  Machine learning (ML) research has been understandably dominated by real-valued artificial neural networks (ANN).  However, these algorithms are not efficiently mapped to traditional computing hardware.  To push ML to resource limited Internet of Things (IoT) devices, much research has focused on spiking neural networks (SNN) running on specialized hardware.  But ML for IoT need not exclusively consider the neural network framework. Hyperdimensional computing with very large binary vectors can be both efficiently mapped to traditional hardware and, through simple mathematical operations, affords online learning in the field.  This talk will examine various applications to expeditionary robotic tasks including transfer learning in the field, non-trivially cloning one trained robot into a swarm, navigation despite extraneous sensors, and updating behavior of trained swarms in the field.
+							</p>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> --> 
+				<p class="content3">Meng Li, Facebook</p>
+				<p class="content1">12:15pm &#8212 12:40pm</p>
+<!--				<p class="content3">Algorithm/Hardware Co-design for Energy/Area efficient In-Memory Neural Network Computing</p>-->
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk2">Towards Energy-Efficient, Robust and Accurate Neural Computing with Algorithm-Hardware Co-Design</button>
+				
+				<div class="modal fade" id="invited_talk2" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Priya Panda.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Priya Panda</b> is an assistant professor in the electrical engineering department at Yale University, USA. She received her PhD in 2019 from Purdue University. She is the recipient of the 2019 Amazon Research Award. Her research interests include neuromorphic computing, deploying robust and energy efficient machine intelligence.
+
+							</div>
+
+						 	<p><br><b>Abstract:</b><br>
+							  Spiking Neural Networks (SNNs) offer an energy-efficient alternative for implementing deep learning applications. In recent years, there have been several proposals focused on supervised (conversion, spike-based gradient descent) training methods to improve the accuracy of SNNs on large-scale tasks. However, each of these methods suffer from scalability, latency, and accuracy limitations. I will talk about certain algorithmic techniques of modifying the SNN configuration with backward residual connections, and hybrid artificial-and-spiking neuronal activations to improve the learning ability of the training methodologies to yield competitive accuracy, while, yielding large efficiency gains over their artificial counterparts. Further, I will discuss our recent work on using a temporal Batch Normalization Through Time (BNTT) technique. Most prior SNN works till now have disregarded batch normalization deeming it ineffective for training temporal SNNs. BNTT allows us to train deep SNN architectures from scratch, for the first time, on complex datasets with just few 25-30 time-steps. Finally, I will delve into the usefulness of analog memristive crossbars that perform Matrix-Vector-Multiplications (MVMs) efficiently with low energy and area requirements for adversarially robust neural networks. Crossbars generally suffer from intrinsic non-idealities that cause errors in performing MVMs, leading to degradation in the accuracy of neural networks. l will discuss how the intrinsic hardware variations manifested through crossbar non-idealities yield adversarial robustness to the mapped models without any additional optimization. 
+							</p>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3">Peter Kairouz, Google </p>
+				<p class="content1">12:40pm &#8212 1:05pm</p>
+<!--				<p class="content3">Bringing Powerful Machine-learning Systems to Daily-life Devices via Algorithm-hardware Co-design</p>-->
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk3">Adaptive Neurorobotics using Nengo and the Loihi</button>
+				
+				<div class="modal fade" id="invited_talk3" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Travis Dewolf.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Travis Dewolf</b> is a co-founder of Applied Brain Research, where he lead the autonomous systems group and develop neurorobotic systems using spiking neural networks and neuromorphic hardware. He received his Ph.D in systems design engineering with a focus in computational neuroscience from the University of Waterloo, where he was a member of the Computational Neuroscience Research Group. His focus was on modeling the motor control system, studying the planning, execution, and adaptation mechanisms that drive movement. Please visit his <a href="http://www.studywolf.com/">research blog</a> to see more his work. 
+							</div>
+						 	<p><b>Abstract:</b><br>
+							   In this talk, I will discuss some of the neurorobotics research we've done at Applied Brain Research using our neural development platform Nengo and Intel's neuromorphic Loihi chip. I will present two systems: 1) A simulated rover controller that combines a deep neural network converted to a spiking neural network to locate a target with a control network developed using the Neural Engineering Framework to drive the robot to the target. In this example I will show how non-experts can quickly develop end-to-end spiking neural networks using deep learning techniques and mechanistic neural circuits. 2) A non-linear adaptive force-based control system that we use to control a real-world Kinova Jaco2 6-DOF arm in a reaching task. In this example I will highlight how we are able to take advantage of the Loihi's on-chip learning to achieve better performance with lower latency and power costs than the same implementation on standard hardware.
+							</p>
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3">Zhiru Zhang, Cornell University</p>
+				
+				
+				<p class="content1">1:05pm &#8212 1:25pm</p>
+				<p class="content3">Break </p>
+
+	
+				<p class="content2">&#8212&#8212&#8212 Session 2: Algorithm-Accelerator Co-design and Compilers &#8212&#8212&#8212 </p>
+				<p class="content2">Section Chair: </p>
+				<p class="content1">1:25pm &#8212 1:50pm</p>
+<!--				<p class="content3">A Product Engine for Energy-Efficient Execution of Binary Neural Networks Using Resistive Memories</p>-->
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk6">VecQ: Minimal Loss DNN Model Compression with Vectorized Weight Quantization</button>
+				
+				<div class="modal fade" id="invited_talk6" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+							
+							<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Deming Chen.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Deming Chen</b> obtained his BS in computer science from University of Pittsburgh, Pennsylvania in 1995, and his MS and PhD in computer science from University of California at Los Angeles in 2001 and 2005 respectively. He joined the ECE department of University of Illinois at Urbana-Champaign in 2005. His current research interests include reconfigurable computing, machine learning and cognitive computing, system-level and high-level synthesis, and hardware security. He has given more than 110 invited talks sharing these research results worldwide. He is the Donald Willett Faculty Scholar and the Abel Bliss Professor of the Grainger College of Engineering, an IEEE Fellow, an ACM Distinguished Speaker, and the Editor-in-Chief of ACM Transactions on Reconfigurable Technology and Systems (TRETS).
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							Quantization has been proven to be an effective method for reducing the computing and/or storage cost of DNNs. However, the trade-off between the quantization bitwidth and final accuracy is complex and non-convex, which makes it difficult to be optimized directly. Minimizing direct quantization loss (DQL) of the coefficient data is an effective local optimization method, but previous works often neglect the accurate control of the DQL, resulting in a higher loss of the final DNN model accuracy. In this talk, we propose a novel metric called Vector Loss. Based on this new metric, we develop a new quantization solution called VecQ, which achieves minimal direct quantization loss and better model accuracy. In addition, in order to speed up the proposed quantization process during model training, we accelerate the quantization process with a parameterized probability estimation method and template-based derivation calculation. We evaluate our proposed algorithm on MNIST, CIFAR, ImageNet, IMDB movie review and THUCNews text data sets with numerical DNN models. The results demonstrate that our proposed quantization solution is more accurate and effective than the state-of-the-art approaches yet with more flexible bitwidth support, 16x weight size reduction.
+							</p>
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3">Jonathan Frankle, Massachusetts Institute of Technology</p>
+
+
+				<p class="content1">1:50pm &#8212 2:15pm</p>
+<!--				<p class="content3">Evolutionary Optimization for Neuromorphic Systems</p>-->
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk7">Hardware/Software Co-Exploration of Deep Neural Architectures</button>
+				
+				<div class="modal fade" id="invited_talk7" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Yiyu.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Yiyu Shi</b> is currently an associate professor in the Department of Computer Science and Engineering at the University of Notre Dame, the site director of NSF I/UCRC Alternative and Sustainable Intelligent Computing, and the director of the Sustainable Computing Lab (SCL). He is also a visiting scientist at Boston Children’s Hospital, the primary pediatric program of Harvard Medical School. He received his B.S. in Electronic Engineering from Tsinghua University, Beijing, China in 2005, the M.S and Ph.D. degree in Electrical Engineering from the University of California, Los Angeles in 2007 and 2009 respectively. His current research interests focus on hardware intelligence and biomedical applications. In recognition of his research, more than a dozen of his papers have been nominated for or awarded as the best paper in top conferences. He was also the recipient of IBM Invention Achievement Award, Japan Society for the Promotion of Science (JSPS) Faculty Invitation Fellowship, Humboldt Research Fellowship, IEEE St. Louis Section Outstanding Educator Award, Academy of Science (St. Louis) Innovation Award, Missouri S&T Faculty Excellence Award, NSF CAREER Award, IEEE Region 5 Outstanding Individual Achievement Award, the Air Force Summer Faculty Fellowship, and IEEE Computer Society Mid-Career Research Achievement Award. He has served on the technical program committee of many international conferences. He is on the executive committee of ACM SIGDA, deputy editor-in-chief of IEEE VLSI CAS Newsletter, and an associate editor of various IEEE and ACM journals.
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							The prevalence of deep neural networks today is supported by a variety of powerful hardware platforms including GPUs, FPGAs, and ASICs. A fundamental question lies in almost every implementation of deep neural networks: given a specific task, what is the optimal neural architecture and the tailor-made hardware in terms of accuracy and efficiency? Earlier approaches attempted to address this question through hardware-aware neural architecture search (NAS), where features of a fixed hardware design are taken into consideration when designing neural architectures. However, we believe that the best practice is through the simultaneous design of the neural architecture and the hardware to identify the best pairs that maximize both test accuracy and hardware efficiency. In this talk, we will present novel co-exploration frameworks for neural architecture and various hardware platforms including FPGA, NoC, ASIC and Computing-in-Memory, all of which are the first in the literature. We will demonstrate that our co-exploration concept greatly opens up the design freedom and pushes forward the Pareto frontier between hardware efficiency and test accuracy for better design trade-offs.
+							</p>
+						</div>
+						
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3">Yuhao Zhu, University of Rochester </p>
+
+				<p class="content1">2:15pm &#8212 2:40pm</p>
+<!--				<p class="content3">Micro AI: When Intelligence Moves to the Low Power Sensors</p>-->
+
+<!-- 				<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk8">Towards Best Possible Deep Learning Acceleration on the Edge - A Compression-Compilation Co-Design Framework
+</button>
+				
+				<div class="modal fade" id="invited_talk8" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Yanzhi Wang.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Yanzhi Wang</b> is currently an assistant professor at Dept. of ECE at Northeastern University, Boston, MA. He received the B.S. degree from Tsinghua University in 2009, and Ph.D. degree from University of Southern California in 2014. His research interests focus on model compression and platform-specific acceleration of deep learning applications. His research maintains the highest model compression rates on representative DNNs since 09/2018. His work on AQFP superconducting based DNN acceleration is by far the highest energy efficiency among all hardware devices. His recent research achievement, CoCoPIE, can achieve real-time performance on almost all deep learning applications using off-the-shelf mobile devices, outperforming competing frameworks by up to 180x acceleration.
+							    <p>
+							    His work has been published broadly in top conference and journal venues (e.g., DAC, ICCAD, ASPLOS, ISCA, MICRO, HPCA, PLDI, ICS, PACT, ISSCC, AAAI, ICML, CVPR, ICLR, IJCAI, ECCV, ICDM, ACM MM, FPGA, LCTES, CCS, VLDB, PACT, ICDCS, Infocom, C-ACM, JSSC, TComputer, TCAS-I, TCAD, TCAS-I, JSAC, TNNLS, etc.), and has been cited above 7,500 times. He has received four Best Paper Awards, has another ten Best Paper Nominations and four Popular Paper Awards. He has received the ARO Young Investigator Program Award (YIP), Massachusetts Acorn Innovation Award, and other research awards from Google, MathWorks, etc. Three of his former Ph.D./postdoc students become tenure track faculty at Univ. of Connecticut, Clemson University, and Texas A&M University, Corpse Christi.
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							Mobile and embedded computing devices have become key carriers of deep learning to facilitate the widespread of machine intelligence. However, there is a widely recognized challenge to achieve real-time DNN inference on edge devices, due to the limited computation/storage resources on such devices. Model compression of DNNs, including weight pruning and weight quantization, has been investigated to overcome this challenge. However, current work on DNN compression suffer from the limitation that accuracy and hardware performance are somewhat conflicting goals difficult to satisfy simultaneously.
+ 
+							In this talk, we present our recent work CoCoPIE, representing Compression-Compilation Codesign, to overcome this limitation towards the best possible DNN acceleration on edge devices. We propose novel fine-grained structured pruning schemes, including pattern-based pruning, block-based pruning, etc. They can simultaneously achieve high hardware performance (similar to filter/channel pruning) while maintaining zero accuracy loss, with the help of compiler, which is beyond the capability of prior work. Similarly, we present novel quantization scheme that achieves ultra-high hardware performance close to 2-bit weight quantization, with almost no accuracy loss. Through the CoCoPIE framework, we are able to achieve real-time on-device execution of a number of DNN tasks, including object detection, pose estimation, activity detection, speech recognition, just using an off-the-shelf mobile device, with up to 180x speedup compared with prior work.
+							</p>
+						</div>
+
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3">Bo Yuan, Rugster University</p>
+
+
+				<p class="content2">&#8212&#8212&#8212 Session 3: Emerging Device and Neuromorphic Computing &#8212&#8212&#8212 </p>
+				<p class="content2">Section Chair: </p>
+
+				<p class="content1">2:40pm &#8212 3:05pm</p>
+				<!-- <p class="content3">Micro AI: When Intelligence Moves to the Low Power Sensors</p> -->
+	<!-- 			<button type="button" class="btn_bn" data-toggle="modal" data-target="#invited_talk9">FPGA-based Computing in the Era of AI and Big Data
+</button>
+				
+				<div class="modal fade" id="invited_talk9" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Invited Talk</h4>
+						</div>
+
+
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Eriko Nurvitadhi.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Eriko Nurvitadhi</b> is a senior research scientist at the CTO office of Programmable Solutions Group at Intel. He leads FPGA-related external/academic and internal research programs. Prior to that, he started and grew FPGA research at Intel Labs, and managed the FPGA research lab. His research focuses on hardware accelerator architectures (e.g., FPGAs, ASICs) for AI and data analytics. He has over 50 academic publications and 15 patents issued in this area. His research has contributed to Intel’s FPGA and ASIC solutions for AI. At Intel, he has received awards for his contributions to co-founding and growing the Xeon+FPGA academic program (HARP), as well as to next-generation FPGA technology. He received his PhD in Electrical and Computer Engineering from Carnegie Mellon University.
+							</div>
+
+							 	<p><b>Abstract:</b><br>
+								The continued rapid growth of data, along with advances in Artificial Intelligence (AI), is reshaping the computing ecosystem landscape. The data-intensive nature of AI requires minimizing data movement. Furthermore, interactive intelligent services require scalable and real-time solutions to provide a compelling user experience. Finally, algorithmic innovations in AI demand a flexible and programmable computing platform to adapt with this rapidly changing field.
+
+								We believe that these trends present tremendous opportunities for FPGAs, which are a natural substrate to provide a programmable, near-data, real-time, and scalable platform for AI analytics. FPGAs are already embedded in several places to perform computation as data flows throughout the computing ecosystem (e.g., “smart” network/storage, near image/audio sensors). As AI becomes more pervasively tied into general-purpose computation, FPGAs are in excellent position to offer flexible computing synergistically with AI. Intel FPGAs are System-in-Package (SiP), scalable with variety of chiplets to complement the FPGA chip. They are also scalable at datacenter-scale as reconfigurable cloud, enabling real-time AI services. Using soft processor overlays, FPGAs can be programmed through software without needing full EDA tool runs each time.
+
+								In this talk, we first discuss the current trends in AI and big data. We then present trends in FPGA and opportunities for FPGAs in the era of AI and big data. Finally, we discuss our recent research in this space.
+								</p>
+						</div>
+
+
+
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div> -->
+				<p class="content3"> Jianhua Yoshua Yang, University of Southern California</p>
+
+				
+				<p class="content1">3:05pm &#8212 3:30pm</p>
+				<p class="content3">Xue Lin, Northeastern University</p>
+
+				<p class="content1">3:30pm &#8212 3:55pm</p>
+				<p class="content3">Shimeng Yu, Georgia Tech</p>
+
+				<p class="content2">&#8212&#8212&#8212 Keynote talk &#8212&#8212&#8212</p>
+				<p class="content1">3:55pm &#8212 4:40pm</p>
+				
+<!--				<p class="content3">TBD</p>-->
+ <!--  				<button type="button" class="btn_bn" data-toggle="modal" data-target="#keynote1">Progress and Challenges on the Path to Efficient Neuromorphic Learning
+				</button>
+				
+ 				<div class="modal fade" id="keynote1" role="dialog">
+					<div class="modal-dialog">
+					  
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						  <h4 class="modal-title">Keynote</h4>
+						</div>
+
+
+						<div class="modal-body" style="text-align:justify">
+							<div >
+							    <div style="float:left; clear: both;" align="left">
+							        <img src="Mike Davies.png" width="120" alt="" hspace="8">
+							    </div>
+							    <b>Mike Davies</b> is Director of Intel’s Neuromorphic Computing Lab. Since joining Intel Labs in 2014, Mike has researched neuromorphic architectures, algorithms, software, and systems, and has fabricated several neuromorphic chip prototypes to date. His group is responsible for Intel’s Loihi research chip. Previously, as a founding employee of Fulcrum Microsystems and its Director of Silicon Engineering, Mike pioneered high performance asynchronous design methodologies as applied to several generations of industry-leading Ethernet switch products. He joined Intel in 2011 by Intel’s acquisition of Fulcrum. 
+							</div>
+
+						 	<p><b>Abstract:</b><br>
+							  Intel’s Loihi neuromorphic chip has a growing body of results demonstrating that neuromorphic architectures can deliver order of magnitude gains in energy efficiency and computational latency for a wide range of workloads compared to conventional CPUs and GPUs.  Meanwhile, new learning algorithms inspired from neuroscience show a path to orders of magnitude more efficient learning compared to deep learning approaches.  Some of these are running on Loihi today, while others require ongoing neuromorphic innovations before they can be realized in hardware.  This talk shares some of these results and perspectives.
+							</p>
+						</div>
+
+
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					  </div>
+					</div>
+				</div>  -->
+				
+				<p class="content3">Vijay Janapa Reddi, Harvard University</p>
+				
+				
+<!-- 				<p class="content2">&#8212&#8212&#8212 Poster Session (2mins each) &#8212&#8212&#8212 </p>
+				<p class="content1">2:45pm &#8212 3:50pm</p>
+
+				<p class="content3">P1. TBD</p>
+				<p class="content4">TBD</p> -->
+	<!-- 			<p class="content3">P2. Achieving Super-Linear Speedup across Multi-FPGA for Real-Time DNN Inference</p>
+				<p class="content4">Weiwen Jiang (University of Notre Dame)</p>
+				<p class="content3">P3. On Neural Architecture Search for Resource-Constrained Hardware Platforms</p>
+				<p class="content4">Qing Lu (University of Notre Dame)</p>
+				<p class="content3">P4. CIMAT: A Transpose SRAM-based Compute-In-Memory Architecture for Deep Neural Network On-Chip Training</p>
+				<p class="content4">Hongwu Jiang (Georgia Institute of Technology)</p>
+				<p class="content3">P5.	HR3AM: A Heat Resilient design for RRAM based neuromorphic computing</p>
+				<p class="content4">Xiao Liu (University of California San Diego) </p>
+				<p class="content3">P6. ACG-Engine: An Inference Accelerator for Content Generative Neural Networks</p>
+				<p class="content4">Haobo Xu (Institute of Computing Technology, Chinese Academy of Sciences)</p>
+				<p class="content3">P7. Mixed Precision Neural Architecture Search for Energy Efficient Deep Learning</p>
+				<p class="content4">Zhixuan Jiang (The University of Texas at Austin)</p>
+				<p class="content3">P8.	Enhanced Error-Correcting DNN Classifier Towards Robust Machine Learning On-a-chip</p>
+				<p class="content4">Tao Liu (Lehigh University)</p>
+				<p class="content3">P9.	PCONV: A Desirable Sparsity Dimension for Real-time Execution -- From Algorithm to Framework</p>
+				<p class="content4">Xiaolong Ma (Northeastern University)</p>
+				<p class="content3">P10. 2.5ms MobileNet-V2 Execution on Mobile Phone -- A Compiler-Assisted Block Pruning Framework </p>
+				<p class="content4">Zhengang Li (Northeastern University)</p>
+				<p class="content3">P11. INA: Incremental Network Approximation Algorithm for Limited Precision Deep Neural Networks</p>
+				<p class="content4">Zheyu Liu (Tsinghua University)</p>
+				<p class="content3">P12. Approximating Backpropagation for a Biologically Plausible Local Learning Rule in Spiking Neural Networks</p>
+				<p class="content4">Haowen Fang (Syracuse University) </p>
+				<p class="content3">P13. Leveraging Model Diversity for High QoS Deep Learning Inference in the Clouds</p>
+				<p class="content4">Jeff (Jun) Zhang (New York University)</p> -->
+				
+<!-- 				<p class="content1">3:50pm &#8212 4:30pm</p>
+				<p class="content2">Poster Discussion</p> -->
+				
+			</td>
+		</tr>
+		<!-- Committee -->
+		<tr>
+			<td class="frameborder">
+				<h3>Organizing Committee</h3>
+				
+				<h4>Co-chairs</h4>
+				<ul style="list-style-type:none;">
+				 	<li>Yanzhi Wang (Northeastern University)</li>
+				 	<li>Yingyan Lin (Rice University)</li>
+				</ul>
+				<h4>Steering Committee</h4>
+				<ul style="list-style-type:none;">
+				 	<li>Yu Cao, Arizona State University</li>
+					<li>Xin Li, Duke University</li>
+					<li>Jae-sun Seo, Arizona State University</li>
+				</ul> 
+				<h4>Technical Program Committee</h4>
+				<ul style="list-style-type:none;">
+				 	<li>Rob Aitken, ARM</li>
+				 	<li>Shawn Blanton, Carnegie Mellon University</li>
+				 	<li>Sankar Basu, National Science Foundation</li>
+					<li>Yiran Chen, Duke University</li>
+					<li>Kailash Gopalakrishnan, IBM</li>
+					<li>Yiorgos Makris, University of Texas, Dallas</li>
+					<li>Kendel McCarley, Raytheon Company</li>
+					<li>Mustafa Ozdal, Bilkent University, Turkey</li>
+					<li>Yuan Xie, University of California, Santa Barbara</li>
+					<li>Jishen Zhao, University of California at San Diego</li>
+					<li>Qinru Qiu, Syracuse University</li>
+					
+<!--					<li>To Be Determined</li>-->
+<!-- 				</ul> 
+				<h4>Web Chair</h4>
+				<ul style="list-style-type:none;">
+				 	<li>Zhuwei Qin, San Francisco State University</li>
+				</ul>  -->
+			</td>
+		</tr>
+		<!-- Sponsors -->
+		<tr>
+			<td class="frameborder">
+				<h3>Sponsored by</h3>
+				<img src="./logo-sigda.jpg" alt="Sigda" height="100px">
+			</td>
+		</tr>
+		<!-- copyright -->
+		<tr>
+			<td><p class="copyright1"> Last updated on Oct. 26, 2021. Contents subject to change. &copy; All rights reserved.</p></td>
+		</tr>
+		
+	</table>
+	
+</body>
+</html>
